@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lakbay Wika</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" type="image/png" href="images/logo.png">
+    </head>
+<body>
+
+  <nav class="navbar">
+    <div class="left-section">
+      <a href="index.html" >
+        <img src="images/logo.png" alt="Lakbay-Wika Logo" class="logo">
+      </a>
+      <span class="brand-name">Lakbay-Wika</span>
+    </div>
+    <div class="right-section">
+      <a href="choose.html" class="nav-link">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Dark Mode Toggle -->
+  <div class="header">
+    <label class="dark-mode-toggle">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider">
+        <span class="icon sun">☀</span>
+        <span class="icon moon">🌙</span>
+      </span>
+    </label>
+  </div>
+
+  <div class="about">
+    <div class="about-container">
+        <p>
+          An easy-to-use web tool called Lakbay-Wika was created to translate English sentences into the eight main Filipino dialects. By providing accurate translations, it helps users interact with locals more easily, overcoming language barriers and strengthening cross-cultural ties. Whether you're a tourist or just want to experience the Philippines' rich diversity, Lakbay-Wika eliminates linguistic barriers.
+        </p>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+      <p>&copy; 2025 Lakbay-Wika. All rights reserved.</p>
+  </footer>
+
+  <script>
+      // Dark Mode Toggle Script
+      document.getElementById("darkModeToggle").addEventListener("change", (event) => {
+          if (event.target.checked) {
+              document.body.classList.add("dark-mode");
+          } else {
+              document.body.classList.remove("dark-mode");
+          }
+      });
+  </script>
+</body>
+</html>

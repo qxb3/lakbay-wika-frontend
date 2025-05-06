@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakbay Wika</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom, #4CAF50, #2196F3);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 1rem 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar .logo {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .welcome-message {
+      font-size: 1.2rem;
+    }
+
+    .nav-link {
+      background-color: #0369a1;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #0284c7;
+    }
+
+    .container {
+      margin-top: 40px;
+      background-color: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    h2 {
+      text-align: center;
+      color: #1e40af;
+    }
+
+    select, textarea, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    button {
+      background-color: #0284c7;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background-color: #0369a1;
+    }
+
+    .translate {
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f8fafc;
+      color: black;
+      border-radius: 16px;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .output-box {
+      background-color: #e0f2fe;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgba(0, 0, 0, 0.5);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="left-section">
+      <a href="index.html" >
+        <img src="images/logo.png" alt="Lakbay-Wika Logo" class="logo">
+      </a>
+      <span class="brand-name">Lakbay-Wika</span>
+    </div>
+    <div class="center-section">
+      <span class="welcome-message">Welcome to the Philippines</span>
+    </div>
+    <div class="right-section">
+      <a href="voice.html" class="nav-link">🎤 Voice</a>
+      <a href="about.html" class="nav-link">ℹ️ About</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h2>Lakbay Wika</h2>
+    <textarea id="input-text" placeholder="Enter text for translation..."></textarea>
+
+    <label for="languageSelect">Translate to:</label>
+    <select id="languageSelector" onchange="changeBackground()">
+      <option value="default">Select Dialect</option>
+      <option value="tl">Tagalog</option>
+      <option value="ilo">Ilocano</option>
+      <option value="hil">Hiligaynon</option>
+      <option value="war">Waray</option>
+      <option value="bik">Bikol</option>
+      <option value="pam">Kapampangan</option>
+      <option value="pang">Pangasinense</option>
+      <option value="mrw">Maranao</option>
+      <option value="ceb">Cebuano</option>
+    </select>
+
+    <button id="translateButton">Translate</button>
+
+    <h2>Translated Text:</h2>
+    <div id="outputText" class="output-box"></div>
+    <button id="speakButton">🔊 Speak Translation</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Lakbay-Wika. All rights reserved.</p>
+  </footer>
+
+  <script src="typing-script.js"></script>
+</body>
+</html>
