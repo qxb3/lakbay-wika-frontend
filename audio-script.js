@@ -1,25 +1,30 @@
 const languageSelector = document.getElementById('languageSelector');
 const outputText = document.getElementById('outputText')
-const speakButton = document.getElementById("speakButton");
+
+const backgroundImages = {
+  none: 'url("")',
+  tagalog: 'url("images/tagalog.png")',
+  cebuano: 'url("images/Cebu.png")',
+  ilocano: 'url("images/ilocano.png")',
+  hiligayon: 'url("images/hiligaynon.png")',
+  bicolano: 'url("images/bikol.png")',
+  waray: 'url("images/waray.png")',
+  kapampangan: 'url("images/kapampangan.png")',
+  pangasinan: 'url("images/Pangasinense.png")',
+};
 
 function changeBackground() {
   const language = languageSelector.value
-  const body = document.body;
 
-  const backgroundImages = {
-    none: 'url("")',
-    tagalog: 'url("images/tagalog.png")',
-    cebuano: 'url("images/Cebu.png")',
-    ilocano: 'url("images/ilocano.png")',
-    hiligayon: 'url("images/hiligaynon.png")',
-    bicolano: 'url("images/bikol.png")',
-    waray: 'url("images/waray.png")',
-    kapampangan: 'url("images/kapampangan.png")',
-    pangasinan: 'url("images/Pangasinense.png")',
-  };
+  if (language === 'none') {
+    document.body.style.background = 'linear-gradient(to bottom, #4CAF50, #2196F3)'
+    console.log(document.body.style.background)
+
+    return
+  }
 
   if (backgroundImages[language]) {
-    body.style.backgroundImage = backgroundImages[language];
+    document.body.style.backgroundImage = backgroundImages[language];
   }
 }
 
@@ -164,11 +169,3 @@ function encodeWAV(samples, sampleRate) {
 
   return new Blob([view], { type: 'audio/wav' });
 }
-
-
-speakButton.addEventListener("click", () => {
-  const utterance = new SpeechSynthesisUtterance(outputText.textContent);
-  utterance.l
-  utterance.lang = 'fil-PH';
-  speechSynthesis.speak(utterance);
-});
