@@ -22,6 +22,7 @@ body {
 }
 
 .welcome-message {
+  display: none;
   font-size: 1.2rem;
 }
 
@@ -34,8 +35,6 @@ body {
 }
 
 .homepage {
-  height: calc(100vh); /* Subtract navbar height */
-  width: calc(500vh);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,6 +58,10 @@ body {
   font-weight: bold;
   margin-bottom: 1rem; /* Space between headline and subheadline */
 
+}
+.content {
+  width: 100%;
+  height: 100%;
 }
 
 .subheadline {
@@ -90,31 +93,14 @@ button:hover {
   top: 30px;
 }
 
-.container-voice {
-  height: calc(100vh); /* Subtract navbar height */
-  width: calc(500vh);
-}
-
 .container {
   background-color: white;
   color: black;
-  padding: 2rem;
-  margin-top: 4rem;
+  padding: 1rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   max-width: 600px;
   width: 100%;
-}
-
-.translate{
-    width: 300px;
-    height: 290px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center content inside container */
 }
 
 h1 {
@@ -347,4 +333,12 @@ button:hover {
 
 .choose-body, .about-body, .home-body, .voice-body {
   height: 100vh;
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
 }
