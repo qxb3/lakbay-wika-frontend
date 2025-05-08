@@ -1,0 +1,29 @@
+.content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.choices {
+  display: flex;
+  gap: 2rem;
+  padding-top: 3rem;
+}
+
+.choices .choice img {
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  transition: background-color 0.5s;
+}
+
+.choices .choice img:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+@media (min-width: 768px) {
+  .choose {
+    font-size: 3em;
+  }
+}

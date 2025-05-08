@@ -1,0 +1,210 @@
+:root {
+  --color1: #4CAF50;
+  --color1d: #3e8e41;
+  --color2: #2196F3;
+  --color2d: #0a6fc2;
+  --fg: #FFFFFF;
+  --fgo: #000000;
+  --err: #FF3333;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(to bottom, var(--color1), var(--color2));
+  color: var(--fg);
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+nav .branding {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav .branding h1 {
+  font-size: 1.3em;
+}
+
+nav .links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav .links #mobile-nav-menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 0.7rem;
+  transition: background-color 0.5s;
+}
+
+nav .links .desktop-nav-links {
+  display: none;
+}
+
+nav .links #mobile-nav-menu-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+nav .links #mobile-nav-menu-btn span {
+  background-color: white;
+  width: 30px;
+  height: 5px;
+  border-radius: 8px;
+}
+
+#mobile-nav-modal-container {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 2rem;
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container {
+  background-color: var(--fg);
+  color: var(--fgo);
+  border-radius: 1rem;
+  width: 100%;
+  margin-top: 5rem;
+  max-width: 768px;
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container .mobile-nav-modal-content-header {
+  background-color: #cccccc;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container .mobile-nav-modal-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container .mobile-nav-modal-content a {
+  color: var(--fgo);
+  font-size: 1.1em;
+  text-decoration: none;
+  padding: 1rem 0.5rem;
+  border-radius: 12px;
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container .mobile-nav-modal-content a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#mobile-nav-modal-container .mobile-nav-modal-container #mobile-nav-modal-close {
+  background-color: #cccccc;
+  border-width: 0;
+  padding: 1rem 0.5rem;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#mobile-nav-modal-container .container .close:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  padding: 2rem;
+  text-align: center;
+}
+
+.transparent {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.btn {
+  background-color: var(--color2d);
+  color: var(--fg);
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.5s;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--color2);
+}
+
+.btn-link {
+  background-color: var(--color2d);
+  color: var(--fg);
+  padding: 0.4rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.5s;
+  font-size: 1.3em;
+}
+
+.btn-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.selector, input[type="text"], input[type="email"] {
+  padding: 0.5rem 1rem;
+  background-color: var(--fg);
+  border-width: 0;
+  border: solid 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  text-align: center;
+  width: 100%;
+  font-size: 1em;
+}
+
+@media (min-width: 768px) {
+  nav .links #mobile-nav-menu-btn {
+    display: none;
+  }
+
+  nav .links .desktop-nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+}

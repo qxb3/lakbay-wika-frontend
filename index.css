@@ -1,0 +1,24 @@
+.content {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+}
+
+.desc {
+  font-size: 1.3em;
+  max-width: 768px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .slogan {
+    font-size: 3em;
+  }
+}

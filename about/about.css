@@ -1,0 +1,55 @@
+.content {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.main-content {
+  background-color: var(--fg);
+  border-radius: 12px;
+  padding: 1rem;
+  color: var(--fgo);
+  width: 100%;
+  max-width: 768px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content > div {
+  flex: 1;
+}
+
+.titles {
+  color: var(--color2d);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 2rem;
+}
+
+#email {
+  text-align: start;
+}
+
+#body {
+  text-align: start;
+  font-size: 1.2em;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  resize: none;
+  margin-top: 1rem;
+}
+
+#send-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row;
+  }
+}

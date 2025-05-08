@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/shared.css" />
+    <link rel="stylesheet" href="/voice/voice.css" />
+    <script src="/shared.js" defer></script>
+    <script src="/voice/voice.js" defer></script>
+
+    <title>Lakbay Wika</title>
+  </head>
+
+  <body>
+    <div id="mobile-nav-modal-container">
+      <div class="mobile-nav-modal-container">
+        <div class="mobile-nav-modal-content-header">
+          <h2>Links</h2>
+        </div>
+
+        <div class="mobile-nav-modal-content">
+          <a href="/voice">🎤 Voice</a>
+          <a href="/typing">⌨️ Typing</a>
+          <a href="/about">ℹ️ About</a>
+        </div>
+
+        <button id="mobile-nav-modal-close">
+          Close
+        </button>
+      </div>
+    </div>
+
+    <nav class="transparent">
+      <a class="btn-link branding" href="/">
+        <img src="/images/logo.png" width="38px" />
+        <h1>Lakbay Wika</h1>
+      </a>
+
+      <div class="links">
+        <div id="mobile-nav-menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <div class="desktop-nav-links">
+          <a class="btn-link" href="/typing">
+            ⌨️ Typing
+          </a>
+
+          <a class="btn-link" href="/about">
+            ℹ️ About
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="content">
+      <div class="main-content">
+        <h1 class="main-content-title">Lakbay Wika</h1>
+
+        <div>
+          <h3>Select Dialect</h3>
+          <select class="selector" id="dialect-selector" onchange="changeBackground()">
+            <option value="none">Select Dialect</option>
+            <option value="tagalog">Tagalog</option>
+            <option value="cebuano">Cebuano</option>
+            <option value="ilocano">Ilocano</option>
+            <option value="hiligayon">Hiligaynon</option>
+            <option value="bicolano">Bikol</option>
+            <option value="waray">Waray</option>
+            <option value="kapampangan">Kapampangan</option>
+            <option value="pangasinan">Pangasinense</option>
+          </select>
+
+          <button class="btn" id="speak-btn">🎤 Hold to speak</button>
+        </div>
+
+        <div>
+          <h2 class="translate-box-title">Translated Text</h2>
+          <div id="translate-box"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="transparent">
+      <p>© 2025 Lakbay Wika All rights reserved.</p>
+    </footer>
+  </body>
+</html>
