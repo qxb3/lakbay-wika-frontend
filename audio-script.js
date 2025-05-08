@@ -90,6 +90,11 @@ navigator.mediaDevices.getUserMedia({ audio: true })
     }
 
     micButton.addEventListener("mousedown", async () => {
+      if (languageSelector.value === 'none') {
+        micButton.textContent = 'Please select a dialect'
+        return
+      }
+      
       micButton.textContent = "🎤 Speaking..."
       micRecorder.start()
     });

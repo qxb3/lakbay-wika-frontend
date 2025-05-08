@@ -131,7 +131,8 @@ label {
 }
 
 select,
-button {
+button,
+a.btn {
   width: 100%;
   padding: 10px;
   margin-top: 10px;
@@ -139,12 +140,16 @@ button {
   border-radius: 5px;
   border: 1px solid #ddd;
   transition: background-color 0.3s, color 0.3s;
+  text-decoration: none;
+  display: block;
+  text-align: center;
 }
 
-button {
+button, a.btn {
   background-color: #007bff;
   color: #fff;
   cursor: pointer;
+  width: 100%;
 }
 
 button:hover {
@@ -293,6 +298,9 @@ button:hover {
   color: #2196F3;
 }
 
+h3 {
+  color: #000000;
+}
 /* Footer */
 footer {
   color: white;
@@ -305,7 +313,7 @@ footer {
   -webkit-backdrop-filter: blur(5px); /* for Safari */
 }
 
-select, textarea, button, input[type="text"] {
+select, textarea, button, input[type="text"], input[type="email"] {
   width: 100%;
   padding: 0.75rem;
   margin: 0.5rem 0;
