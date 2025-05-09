@@ -20,7 +20,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       const blob = await resampleAudioBlob(new Blob(chunks, { type: 'audio/wav' }))
       chunks = []
 
-      const speechToTextRes = await fetch('http://localhost:4321/speech-to-text', {
+      const speechToTextRes = await fetch('https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/speech-to-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/octet-stream'
@@ -41,7 +41,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
         return
       }
 
-      const translateRes = await fetch(`http://localhost:4321/translate?text=${encodeURIComponent(text)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
+      const translateRes = await fetch(`https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/translate?text=${encodeURIComponent(text)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
         method: 'GET'
       })
 

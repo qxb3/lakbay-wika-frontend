@@ -18,7 +18,7 @@ translateBtn.addEventListener('click', async () => {
 
   translateBtn.textContent = '⏳ Processing...'
 
-  const translateRes = await fetch(`http://localhost:4321/translate?text=${encodeURIComponent(phraseText.value)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
+  const translateRes = await fetch(`https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/translate?text=${encodeURIComponent(phraseText.value)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
     method: 'GET'
   })
 
