@@ -185,7 +185,7 @@ footer {
   -webkit-backdrop-filter: blur(15px);
 }
 
-.selector, input[type="text"], input[type="email"] {
+.selector, input[type="text"], input[type="email"], input[type="password"] {
   padding: 0.5rem 1rem;
   background-color: var(--fg);
   border-width: 0;

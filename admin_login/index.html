@@ -6,9 +6,10 @@
 
     <link rel="icon" type="image/png" href="../images/logo.png" />
 
-    <link rel="stylesheet" href="shared.css" />
-    <link rel="stylesheet" href="index.css" />
-    <script src="shared.js" defer></script>
+    <link rel="stylesheet" href="../shared.css" />
+    <link rel="stylesheet" href="admin_login.css" />
+    <script src="../shared.js" defer></script>
+    <script src="admin_login.js" defer></script>
 
     <title>Lakbay Wika</title>
   </head>
@@ -34,7 +35,7 @@
 
     <nav class="transparent">
       <a class="btn-link branding" href="">
-        <img src="images/logo.png" width="38px" />
+        <img src="../images/logo.png" width="38px" />
         <h1>Lakbay Wika</h1>
       </a>
 
@@ -54,20 +55,22 @@
     </nav>
 
     <div class="content">
-      <div>
-        <h1 class="slogan">
-          <span>Breaking Barriers, One</span>
-          <span>Word at a time</span>
-        </h1>
+      <div class="main-content">
+        <h1 class="title">Admin Login</h1>
 
-        <p class="desc">
-          Easily translate common phrases into 8 Filipino dialects.
-          Experience seamless communication wherever you go.
-        </p>
+        <div class="inputs">
+          <div>
+            <h4>Username</h4>
+            <input id="username" type="text" placeholder="username" />
+          </div>
 
-        <a class="get-started btn-link" href="/choose">
-          Get Started
-        </a>
+          <div>
+            <h4>Password</h4>
+            <input id="password" type="password" placeholder="password" />
+          </div>
+        </div>
+
+        <button id="login-btn" class="btn">Login As Admin</button>
       </div>
     </div>
 
