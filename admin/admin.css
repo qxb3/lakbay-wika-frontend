@@ -33,8 +33,34 @@
   flex: 1;
 }
 
+.graphs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .graph {
   background-color: var(--fg);
+  display: block;
+}
+
+#error-rate {
+  max-width: 600px !important;
+  max-height: 400px !important;
+}
+
+#common-dialects {
+  max-width: 400px !important;
+  max-height: 400px !important;
+}
+
+#user-overtime {
+  max-width: 800px !important;
+  max-height: 400px !important;
+}
+
+#common-dialects {
+  flex: 0 0 20%;
 }
 
 .view-title {
