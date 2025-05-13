@@ -33,6 +33,14 @@
   flex: 1;
 }
 
+.graph {
+  background-color: var(--fg);
+}
+
+.view-title {
+  margin-bottom: 2rem;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -58,3 +66,4 @@ td {
 th:nth-child(1), td:nth-child(1) {
   width: 25%;
 }
+

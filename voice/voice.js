@@ -20,7 +20,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       const blob = await resampleAudioBlob(new Blob(chunks, { type: 'audio/wav' }))
       chunks = []
 
-      const speechToTextRes = await fetch('https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/speech-to-text', {
+      const speechToTextRes = await fetch('http://localhost:4321/speech-to-text', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/octet-stream'
@@ -31,6 +31,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       if (speechToTextRes.status !== 200) {
         speakBtn.textContent = '⚠️ Cannot recognize speech'
         speakBtn.style.backgroundColor = 'var(--err)'
+        window.logTranslation(userId, 'voice', dialectSelector.value, false, speakBtn.textContent)
         return
       }
 
@@ -38,16 +39,18 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       if (text.length === 0) {
         speakBtn.textContent = '⚠️ Cannot recognize speech'
         speakBtn.style.backgroundColor = 'var(--err)'
+        window.logTranslation(userId, 'voice', dialectSelector.value, false, speakBtn.textContent)
         return
       }
 
-      const translateRes = await fetch(`https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/translate?text=${encodeURIComponent(text)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
+      const translateRes = await fetch(`http://localhost:4321/translate?text=${encodeURIComponent(text)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
         method: 'GET'
       })
 
       if (translateRes.status !== 200) {
         speakBtn.textContent = `There is no phrase: ${text} on ${dialectSelector.value}`
         speakBtn.style.backgroundColor = 'var(--err)'
+        window.logTranslation(userId, 'voice', dialectSelector.value, false, speakBtn.textContent)
         return
       }
 
@@ -55,6 +58,8 @@ navigator.mediaDevices.getUserMedia({ audio: true })
       translateBox.textContent = translation
 
       speakBtn.textContent = "🎤 Hold to speak"
+
+      window.logTranslation(userId, 'voice', dialectSelector.value, true, null)
     }
 
     speakBtn.addEventListener('mousedown', () => {

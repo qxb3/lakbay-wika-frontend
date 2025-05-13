@@ -18,12 +18,14 @@ translateBtn.addEventListener('click', async () => {
 
   translateBtn.textContent = '⏳ Processing...'
 
-  const translateRes = await fetch(`https://d9e2f7def8d1f1df7cf968a28f045856.serveo.net/translate?text=${encodeURIComponent(phraseText.value)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
+  const translateRes = await fetch(`http://localhost:4321/translate?text=${encodeURIComponent(phraseText.value)}&targetLanguage=${encodeURIComponent(dialectSelector.value)}`, {
     method: 'GET'
   })
 
   if (translateRes.status !== 200) {
     translateBtn.textContent = `There is no phrase: ${phraseText.value} on ${dialectSelector.value}`
+    const userId = localStorage.getItem('user')
+    window.logTranslation(userId, 'text', dialectSelector.value, false, translateBtn.textContent)
     return;
   }
 
@@ -32,4 +34,6 @@ translateBtn.addEventListener('click', async () => {
 
   translateBtn.textContent = 'Translate'
   translateBtn.style.backgroundColor = 'var(--color2d)'
+
+  window.logTranslation(userId, 'text', dialectSelector.value, true, null)
 })
