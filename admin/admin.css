@@ -1,0 +1,60 @@
+.content {
+  display: flex;
+  gap: 1rem;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 2rem;
+}
+
+.sidebar-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  text-align: end;
+  color: var(--fg);
+}
+
+.sidebar-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.sidebar-btn.active {
+  background-color: var(--color2);
+}
+
+.main-content {
+  padding: 1rem;
+  flex: 1;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+th {
+  background-color: var(--color1);
+  color: var(--fg);
+  font-weight: bold;
+}
+
+td {
+  background-color: var(--fg);
+  color: var(--fgo);
+}
+
+th:nth-child(1), td:nth-child(1) {
+  width: 25%;
+}
