@@ -13,6 +13,7 @@
   max-width: 768px;
   display: flex;
   flex-direction: column;
+  gap: 3rem;
 }
 
 .main-content > div {
@@ -30,11 +31,11 @@ p {
   margin-bottom: 2rem;
 }
 
-#email {
+#name {
   text-align: start;
 }
 
-#body {
+#feedback {
   text-align: start;
   font-size: 1.2em;
   padding: 0.5rem 1rem;
