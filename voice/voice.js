@@ -59,6 +59,7 @@ navigator.mediaDevices.getUserMedia({ audio: true })
 
       speakBtn.textContent = "🎤 Hold to speak"
 
+      const userId = localStorage.getItem('user')
       window.logTranslation(userId, 'voice', dialectSelector.value, true, null)
     }
 
