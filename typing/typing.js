@@ -35,5 +35,6 @@ translateBtn.addEventListener('click', async () => {
   translateBtn.textContent = 'Translate'
   translateBtn.style.backgroundColor = 'var(--color2d)'
 
+  const userId = localStorage.getItem('user')
   window.logTranslation(userId, 'text', dialectSelector.value, true, null)
 })

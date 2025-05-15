@@ -1,5 +1,14 @@
+(() => {
+  const admin = localStorage.getItem('admin')
+  if (!admin) {
+    window.location.href = '/admin_login'
+  }
+})()
+
 const monitorBtn = document.getElementById('monitor-btn')
 const feedbacksBtn = document.getElementById('feedbacks-btn')
+
+const logoutBtn = document.getElementById('logout-btn')
 
 const monitorView = document.getElementById('monitor-view')
 const feedbacksView = document.getElementById('feedbacks-view')
@@ -22,6 +31,11 @@ feedbacksBtn.addEventListener('click', () => {
 
   feedbacksView.style.display = 'block'
   monitorView.style.display = 'none'
+})
+
+logoutBtn.addEventListener('click', () => {
+  localStorage.removeItem('admin')
+  window.location.href = '/admin'
 })
 
 ;(() => {
